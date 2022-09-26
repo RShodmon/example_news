@@ -12,7 +12,6 @@
     <div class="container">
         <form class="form-signin" method="POST">
             <h2>Login</h2>
-            <?php if(isset($fsmsg)){?> <div class="alert alert-danger" role="alert"><?php echo $fsmsg; ?> </div> <?php } ?>
             <input type="text" name="username" class="form-control" placeholder="Username" required>
             <input type="text" name="usersurname" class="form-control" placeholder="Usersurname" required>
             <input type="email" name="email" class="form-control" placeholder="Email" required>
@@ -27,15 +26,15 @@
 
 <?php
 require('connect.php');
-session_start();
-    if (isset($_POST['email']) and isset($_POST['password'])) {
+
+    if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['usersurname'])) {
         $username = htmlspecialchars($_POST['username']);
         $usersurname = htmlspecialchars($_POST['usersurname']);
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
 
         $sql = "SELECT * FROM user WHERE email = '$email' and password = '$password'";
-        $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+        $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
 
         if($count == 1) {
@@ -51,9 +50,14 @@ session_start();
     if (isset($_SESSION['email']) and isset($_SESSION['password'])) {
         $email = $_SESSION['email'];
         $password = $_SESSION['password'];
-        header("Location: page.php");
-        exit;
+        echo "<a href='page.php' id='page' class='btn btn-lg btn-primary btn-block'>Go in</a>";
+    }
+    if ($email != $_SESSION['email'] and $password != $_SESSION['password']) {
+        $fsmsg = 'Error';
     }
 ?>
+<div class='form-signin'>
+    <?php if(isset($fsmsg)){?> <div class="alert alert-danger" role="alert"><?php echo $fsmsg; ?> </div> <?php } ?>
+</div>
 
 <?php $conn->close(); ?>
