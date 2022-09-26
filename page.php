@@ -7,12 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    
+    <?php require('connect.php'); ?>
 </head>
 <body>
-    <?php $sql = "SELECT name FROM user"; 
-        $username = $sql;
-    ?>
-    <?php echo 'Hello ' . $usename; ?>
+    <ul id='menu' class="form-signin">
+        <li><a href="#">Menu</a>
+            <ul>
+                <li><a href='index.php'>Logout</a></li>
+            </ul>
+        </li>
+    </ul>
 </body>
 </html>
+<script src='script.js'></script>

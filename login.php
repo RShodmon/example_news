@@ -40,7 +40,6 @@ require('connect.php');
         if($count == 1) {
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
-            $smsg = "Registered";
         }else {
             $fsmsg = 'Error';
         }
