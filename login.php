@@ -5,16 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <?php
-
-    // $servername = "localhost";
-    // $u = "root";
-    // $pass = "root";
-    // $dbname = "users";
-
-    // $conn = new mysqli($servername, $u, $pass, $dbname);
-    
-    ?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -37,8 +27,8 @@
 
 <?php
 require('connect.php');
-
-    if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['usersurname'])) {
+session_start();
+    if (isset($_POST['email']) and isset($_POST['password'])) {
         $username = htmlspecialchars($_POST['username']);
         $usersurname = htmlspecialchars($_POST['usersurname']);
         $email = htmlspecialchars($_POST['email']);
@@ -58,9 +48,11 @@ require('connect.php');
 
     }
     
-    if (isset($_SESSION['email'])) {
+    if (isset($_SESSION['email']) and isset($_SESSION['password'])) {
         $email = $_SESSION['email'];
-        header('Location: page.php');
+        $password = $_SESSION['password'];
+        header("Location: page.php");
+        exit;
     }
 ?>
 
