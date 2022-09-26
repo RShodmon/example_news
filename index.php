@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo 'hello'; ?>
+    <div>
+        <nav style="margin: auto; background: silver">
+            <a href="index.php">Main</a>
+            <a href="#">News</a>
+            <a href="#">Login</a>
+            <a href="#">Logout</a>
+        </nav>
+    </div>
 </body>
 </html>
