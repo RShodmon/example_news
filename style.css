@@ -1,0 +1,13 @@
+.form-signin {
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}
+.form-control {
+    margin: 1px;
+}
+
+#Logout {
+    max-width: 200px;
+    margin: auto;
+}
