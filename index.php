@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <?php
-
-    require('connect.php');
-    
-    ?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <?php
+    require('connect.php');
+    ?>
+
 </head>
 <body>
 <?php 
@@ -19,8 +18,8 @@
         $username = htmlspecialchars($_POST['username']);
         $usersurname = htmlspecialchars($_POST['usersurname']);
         $email = htmlspecialchars($_POST['email']);
-        $password = htmlspecialchars($_POST['password']);
-    
+        $word = htmlspecialchars($_POST['password']);
+        $password = md5($word);
         $sql = "INSERT INTO user (name, surname, email, password) VALUES ('$username', '$usersurname', '$email', '$password')";
     
         if (mysqli_query($conn, $sql)) {
@@ -31,7 +30,7 @@
     }  
 ?>
     <div class="container">
-        <form class="form-signin" method="POST">
+        <form action="" class="form-signin" method="POST">
             <h2>Registration</h2>
             <?php if(isset($smsg)){?> <div class="alert alert-success" role="alert"><?php echo $smsg; ?> </div> <?php } ?>
             <?php if(isset($fsmsg)){?> <div class="alert alert-danger" role="alert"><?php echo $fsmsg; ?> </div> <?php } ?>

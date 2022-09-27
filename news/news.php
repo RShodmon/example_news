@@ -1,5 +1,5 @@
 <div class="flex flex-col grab-4">
-    <a href="../news/create.php" class="my-2 w-2/12 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Creat</a>
+    <a href="../create.php" class="my-2 w-2/12 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create</a>
     <hr>
     <div class="my-2 p-4 shadow rounded-md">
         <h2 class="font-bold">Why do we use it?</h2>
@@ -11,7 +11,7 @@
                 <p class="mx-2">User: Admin</p>
             </div>
             <div class="flex text-gray-800">
-                <a href="../news/edite.php" class="mx-2 w-full text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Edit</a>
+                <a href="../edite.php" class="mx-2 w-full text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Edit</a>
                 <a href="#" class="mx-2 w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Delete</a>
             </div>
         </div>
@@ -26,7 +26,7 @@
                 <p class="mx-2">User: Admin</p>
             </div>
             <div class="flex text-gray-800">
-                <a href="../news/edite.php" class="mx-2 w-full text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Edit</a>
+                <a href="../edite.php" class="mx-2 w-full text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Edit</a>
                 <a href="#" class="mx-2 w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Delete</a>
             </div>
         </div>

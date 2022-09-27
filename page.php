@@ -1,3 +1,14 @@
+<?php session_start(); ?>
+<?php require('connect.php'); ?>
+
+<?php 
+
+$email = $_POST['email'];
+$password = md5($POST['password']);
+
+$check_user = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email' AND password = '$password'");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +16,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <?php require('connect.php'); ?>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <ul id='menu' class="form-signin">
-        <li><a href="#">Menu</a>
-            <ul>
-                <li><a href='index.php'>Logout</a></li>
-            </ul>
-        </li>
-    </ul>
+
 </body>
 </html>
-<script src='script.js'></script>
+
+
+
+
+
