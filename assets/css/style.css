@@ -1,0 +1,81 @@
+.form-signin {
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    
+}
+
+#reg {
+    color: whitesmoke;
+}
+#login {
+    color: whitesmoke;
+}
+
+#page{
+    max-width: 370px;
+    margin: auto;
+}
+
+#menu {
+    display: flex;
+    margin: 0;
+}
+
+#menu li {
+    background: blue;
+    width: 100px;
+    list-style: none;
+    position: relative;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+#menu a:hover {
+    background: darkblue;
+}
+
+#menu ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    padding: 0;
+}
+
+#menu li:hover ul{
+    display: block;
+}
+
+.menu-container {
+    background-color: gray;
+}
+
+.post {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+    color: #003333;
+}
+
+.title {
+    color: #003333;
+}
+
+body {
+    background-color: #004242;
+}
+
+#menu_btn {
+    background-color: #003333;
+}
